@@ -1,0 +1,50 @@
+body {
+    margin-left: 10px;
+}
+
+nav{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+header, main, footer, h1, p, figure {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+figcaption p {
+    margin-bottom: 0px;
+}
+
+.skip a {
+    position: absolute;
+    top: -40px;
+    color: black;
+}
+
+.skip a:focus {
+    position: absolute;
+    top: 0;
+    color: black;
+}
+
+nav .currentPage {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid black
+}
+
+img {
+    width: 300px;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+img:hover, img:focus {
+    border: 3px solid red;
+    box-shadow: 10px 10px black;
+}
