@@ -37,8 +37,6 @@ nav{
     background-color: #ddd;
     padding: 20px 0;
     text-align: center;
-    margin-right: 0 auto;
-    grid-column: 1 / -1;
 }
 
 header {
@@ -135,7 +133,7 @@ h2 {
 }
 
 
-
+/* Skip to content button */
 .skip a {
     position: absolute;
     top: -40px;
@@ -175,6 +173,8 @@ img:hover, img:focus {
     box-shadow: 10px 10px black;
 }
 
+
+/* Font Awesome Icon Spacing in Navbar */
 i {
     margin-right: 2px;
 }
@@ -194,6 +194,8 @@ i {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
+  
 
   @media screen and (prefers-reduced-motion: reduce){
     html{
