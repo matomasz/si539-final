@@ -1,23 +1,135 @@
 body {
-    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #B3B3B3;
 }
 
 nav{
-    margin-top: 30px;
+    grid-row: 1 / span 1;
+}
+
+header{
+    grid-row: 2 / span 1;
+}
+
+main{
+    grid-row: 3 / span 1;
+}
+
+aside{
+    grid-row: 4 / span 1;
+}
+
+footer{
+    grid-row: 6 / span 1;
+}
+
+nav, header, main, aside, footer{
+    grid-column: 1 / -1;
+}
+
+nav{
+    background-color: #ddd;
+    padding: 20px 0;
+    text-align: center;
+    margin-right: 0 auto;
+    grid-column: 1 / -1;
+}
+
+header {
+    background-attachment: scroll; /* Parallax effect */
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: contain;       /* Parallax effect */
+    color: white;
+    height: 20vh;                /* Parallax effect */
+    background-color: #B3B3B3;
+    background-image: url('../images/header_background.jpeg');
+    align-content: center;
+}
+
+header, main, aside, h1, p, figure {
     margin-bottom: 30px;
 }
 
-header, main, footer, h1, p, figure {
-    margin-bottom: 30px;
+
+main > figure{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+aside, main > p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    margin-left: 5%;
+    font-size: 1.5em;
+}
+
+#gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#gallery figure{
+    width: 80%;
+}
+
+figure{
+    position: relative;
+    padding: 10px;
+    max-width: 100%;
+}
+
+figure img{
+    display: block;
+    max-width: 80%;
+    max-height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    width: 100%;
+    margin: 0 auto;
+}
+
+figcaption p {
+    margin-bottom: 10px;
+}
+
+h1{
+    background-color: transparent;
+    font-size: 50px;
+    line-height: 20vh;
+    text-align: center;
+    animation: shake 1s;
+  }
+
+  h1:hover {
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+  }
+
+.h1Background{
+    background-color: rgba(0,0,0,.5);
+}
+
+figure, footer {
+    background-color: rgba(0,0,0,.1);
 }
 
 h2 {
     margin-bottom: 10px;
 }
 
-figcaption p {
-    margin-bottom: 0px;
-}
+
 
 .skip a {
     position: absolute;
@@ -31,14 +143,23 @@ figcaption p {
     color: black;
 }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navOption{
+    color: #000;
+    text-decoration: none;
+}
+
 nav .currentPage {
     text-transform: uppercase;
     font-weight: bold;
-    border: 2px solid black
+    background-color: rgba(0,0,0,.2);
 }
 
 img {
-    width: 300px;
     border: 3px solid black;
     margin: 10px;
     padding: 10px;
@@ -48,3 +169,33 @@ img:hover, img:focus {
     border: 3px solid red;
     box-shadow: 10px 10px black;
 }
+
+i {
+    margin-right: 2px;
+}
+
+/*Animation taken and repurposed from https://www.w3schools.com/howto/howto_css_shake_image.asp because it achieves the effect I am looking for*/
+/*It is supposed to make the h1's "angry" :P (I hope that joke is appreciated by whoever else reads this) */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+      scroll-behavior: auto; /* Removes scroll animation */
+    }
+
+    h1, h1:hover {
+        animation-duration: 0s;
+    }
+  }

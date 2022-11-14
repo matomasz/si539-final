@@ -2,15 +2,16 @@
 <html lang="en">
 <!-- All of the meta data for the page belongs in the header tag -->
 <head>
+  <script src="https://kit.fontawesome.com/e33a96f952.js" crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMEHZRMT81"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-YMEHZRMT81');
   </script>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/12angry_men_favicon.ico">
@@ -22,20 +23,18 @@
 <body>
 
 	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+  <nav>	
+    <a class="navOption" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+    <a class="navOption" href="jurors.html"><i class="fa-solid fa-users"></i>Jurors</a>
+    <a class="navOption" href="evidence.html"><i class="fa-solid fa-question"></i>Evidence</a>
+    <a class="navOption currentPage" href="takeaways.html"><i class="fa-solid fa-message"></i>Takeaways</a>
+  </nav>
 
 	<header>
-		<nav>
-			
-			<a href="index.html">Home</a>
-            <a href="jurors.html">Jurors</a>
-            <a href="evidence.html">Evidence</a>
-            <a href="takeaways.html" class="currentPage">Takeaways</a>
-		</nav>
+    <h1><span class="h1Background">Takeaways</span></h1>
 	</header>
 
 	<main id="main">
-		
-		<h1>Takeaways</h1>
 		
 		<h2>Reasons Why I Like the Movie</h2>
 		
@@ -67,10 +66,9 @@
             And that is only one of many cool aspects of arguementation shown in the film.
 		</p>
 
-		<form
-  action="https://formspree.io/f/myyvblkw"
-  method="POST"
->
+
+    <!--
+		<form action="https://formspree.io/f/myyvblkw" method="POST">
   <label>
     Your email:
     <input type="email" name="email">
@@ -79,12 +77,16 @@
     Your message:
     <textarea name="message"></textarea>
   </label>
-  <!-- your other form fields go here -->
   <button type="submit">Send</button>
 </form>
+-->
 
 
 	</main>
+
+  <aside>
+		<p>Header Background Source: "https://www.bulbapp.com/u/12-angry-men-precis~29"</p>
+	</aside>
 
 	<footer>
 		&copy; 2022
