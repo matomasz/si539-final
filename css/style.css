@@ -4,6 +4,11 @@ body {
     background-color: #B3B3B3;
 }
 
+h1, h2, a {
+    font-family: 'Libre Franklin', sans-serif;
+
+}
+
 nav{
     grid-row: 1 / span 1;
 }
