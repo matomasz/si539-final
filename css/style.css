@@ -1,6 +1,6 @@
 body {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100vw;
     background-color: #B3B3B3;
 }
 
@@ -35,7 +35,7 @@ nav, header, main, aside, footer{
 
 nav{
     background-color: #ddd;
-    padding: 20px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
@@ -149,11 +149,13 @@ h2 {
 nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .navOption{
     color: #000;
     text-decoration: none;
+    border: 10px solid rgba(0,0,0,0);
 }
 
 nav .currentPage {
