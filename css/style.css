@@ -4,11 +4,11 @@ body {
     background-color: #B3B3B3;
 }
 
-* {
+*, p, footer {
     font-family: sans-serif;
 }
 
-h1, h2, a {
+h1, h2, a, #dummyForm {
     font-family: 'Libre Franklin', sans-serif;
 
 }
@@ -191,6 +191,14 @@ form {
     margin-right: auto;
 }
 
+#dummyForm {
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+#jurorDropdown option{
+    padding: 0px;
+}
 
 /* Font Awesome Icon Spacing in Navbar */
 i {
