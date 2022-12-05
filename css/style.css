@@ -4,6 +4,10 @@ body {
     background-color: #B3B3B3;
 }
 
+* {
+    font-family: sans-serif;
+}
+
 h1, h2, a {
     font-family: 'Libre Franklin', sans-serif;
 
@@ -51,7 +55,7 @@ header {
     align-content: center;
 }
 
-header, main, aside, h1, p, figure {
+header, main, h1, p, figure {
     margin-bottom: 30px;
 }
 
@@ -173,6 +177,18 @@ img {
 img:hover, img:focus {
     border: 3px solid red;
     box-shadow: 10px 10px black;
+}
+
+form {
+    background-color: rgba(0,0,0,.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 75%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
