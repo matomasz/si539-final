@@ -191,6 +191,10 @@ form {
     margin-right: auto;
 }
 
+form textarea {
+    width: 75%;
+}
+
 #dummyForm {
     margin-top: -20px;
     margin-bottom: 10px;
@@ -221,7 +225,11 @@ i {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-  
+
+  @media all and (min-width: 700px){
+    
+  }
+
 
   @media screen and (prefers-reduced-motion: reduce){
     html{
