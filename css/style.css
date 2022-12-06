@@ -55,6 +55,10 @@ header {
     align-content: center;
 }
 
+footer {
+    padding-top: 20px;
+}
+
 header, main, h1, p, figure {
     margin-bottom: 30px;
 }
@@ -66,14 +70,13 @@ main > figure{
     margin-right: auto;
 }
 
-aside, main > p {
+section, aside, article > p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
 h2 {
-    margin-left: 5%;
     font-size: 1.5em;
 }
 
@@ -225,9 +228,102 @@ i {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
+  /*Tablet Width*/
+  @media all and (min-width: 768px){
 
-  @media all and (min-width: 700px){
+    nav{
+        max-height: 36px;
+    }
     
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    article{
+        grid-column: 1 / span 1;
+    }
+    
+    aside{
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    #dummyForm {
+        grid-column: 1 / -1;
+    }
+
+    #gallery {
+        grid-column: 1 / -1;
+    }
+
+    #messageForm {
+        grid-column: 1 / -1;
+    }
+
+    #gallery{
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    #gallery figure{
+        width: 45%;
+    }
+    
+  }
+
+  /*Desktop Width*/
+  @media all and (min-width: 992px){
+
+    figure img {
+        max-height: 250px;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        /*align-items: center;*/
+    }
+
+    article{
+        grid-column: 2 / span 4;
+    }
+    
+    aside{
+        grid-column: 6 / span 4;
+    }
+
+    #gallery figure{
+        width: 30%;
+    }
+    
+
+    #knifeSection{
+        grid-column: 2 / span 7;
+    }
+
+    #apartmentSection{
+        grid-column: 3 / span 7;        
+    }
+
+    #whyILikeIt{
+        grid-column: 2 / span 7;
+    }
+
+    #whatITakeAway{
+        grid-column: 3 / span 7;
+    }
+
+    #messageForm{
+        grid-column: 2 / span 7;
+    }
+
+
   }
 
 
